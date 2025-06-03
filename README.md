@@ -1,4 +1,4 @@
-# JavaTasker 📝
+# TaskerX 📝
 
 Ein einfaches Konsolen-basiertes ToDo-Verwaltungstool in Java. Entwickelt zur Demonstration von Git-Branching-Strategien.
 
@@ -6,7 +6,7 @@ Ein einfaches Konsolen-basiertes ToDo-Verwaltungstool in Java. Entwickelt zur De
 
 ##  Projektziel
 
-Mit JavaTasker kann man:
+Mit TaskerX kann man:
 
 - Aufgaben über die Konsole hinzufügen
 - Alle offenen Aufgaben anzeigen
