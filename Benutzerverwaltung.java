@@ -10,7 +10,8 @@ public class Benutzerverwaltung {
         benutzerListe = new ArrayList<>();
         ladeBenutzer();
     }
-// Benutzer laden (Wie von Aufgabenstellung fordert)
+
+    // Benutzer laden (Wie von Aufgabenstellung fordert)
     public void ladeBenutzer() {
         try (BufferedReader reader = new BufferedReader(new FileReader(BENUTZER_DATEI))) {
             String line;
@@ -48,5 +49,11 @@ public class Benutzerverwaltung {
             }
         }
         return null;
+    }
+
+    // NEU: Benutzer hinzufügen
+    public void benutzerHinzufuegen(Benutzer benutzer) {
+        benutzerListe.add(benutzer);
+        speichereBenutzer();
     }
 }
