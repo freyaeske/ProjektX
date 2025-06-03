@@ -1,50 +1,21 @@
-# TaskerX 📝
-
-Ein einfaches Konsolen-basiertes ToDo-Verwaltungstool in Java. Entwickelt zur Demonstration von Git-Branching-Strategien.
-
+# TaskerX 
+Was haben wir noch zu Erledigen ?
 ---
 
 ##  Projektziel
 
-Mit TaskerX kann man:
+Buchstaben erraten Spiel mit Glücksrad
 
-- Aufgaben über die Konsole hinzufügen
-- Alle offenen Aufgaben anzeigen
-- Aufgaben löschen (in Entwicklung)
+Glücksrad mit Zufallspunkten oder „Niete“
+Anzeige des aktuellen Wortfortschritts (_ _ _ A _)
+Punktevergabe abhängig vom Glücksrad-Ergebnis
+Spiel endet bei vollständiger Lösung des Wortes
 
----
 
-##  Projektstruktur
-GitFlow
+Verwendung von Random für das Glücksrad
 
-| Branch                | Zweck                             |
-|----------------------|------------------------------------|
-| `main`               | Produktiv, stabil                  |
-| `dev`                | Aktuelle Entwicklung               |
-| `feature/add-task`   | Aufgaben hinzufügen                |
-| `feature/remove-task`| Aufgaben löschen (WIP)             |
-| `hotfix/empty-task-bug` | Fehlerbehebung bei leerer Eingabe |
-
-Entwicklungsschritte (Trunks & Features)
-
-- [x] Projektstruktur anlegen (`main`)
-- [x] Grundlogik schreiben (`feature/add-task`)
-- [ ] Löschfunktion einbauen (`feature/remove-task`)
-- [ ] Datenspeicherung implementieren (`feature/storage`)
-- [ ] Release 1.0 vorbereiten (`release/1.0`)
-
-Beispiel: Hinzufügen eines Tasks
-
-```bash
-java JavaTasker
-> Neue Aufgabe: "Git verstehen"
-> Aufgabe gespeichert.
-Mitwirkende
-
-Max Mustermann
-Lisa Codewitz
-
-Nutzung
-
-javac src/JavaTasker.java
-java -cp src JavaTasker
+Beispielablauf
+Spieler dreht das Glücksrad → z. B. 100 Punkte
+Spieler rät den Buchstaben „E“
+Der Buchstabe kommt 2× vor → 100 × 2 = 200 Punkte
+Das Wort wird teilweise sichtbar → _ E _ _ E _
