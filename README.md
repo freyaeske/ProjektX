@@ -1,4 +1,4 @@
-# TaskerX - Was haben wir noch zu Erledigen ?
+
 ---
 
 ##  Projektziel
