@@ -13,6 +13,7 @@ public class JavaTasker {
             System.out.println("1. Aufgabe hinzufügen");
             System.out.println("2. Aufgaben anzeigen");
             System.out.println("3. Beenden");
+            System.out.println("4. Aufgabe löschen");
             System.out.print("> ");
             input = scanner.nextLine();
 
@@ -27,6 +28,7 @@ public class JavaTasker {
                         System.out.println("⚠️ Aufgabe darf nicht leer sein.");
                     }
                     break;
+
                 case "2":
                     if (tasks.isEmpty()) {
                         System.out.println("📭 Keine Aufgaben vorhanden.");
@@ -37,9 +39,30 @@ public class JavaTasker {
                         }
                     }
                     break;
+
                 case "3":
                     System.out.println("👋 Auf Wiedersehen!");
                     return;
+
+                case "4":
+                    if (tasks.isEmpty()) {
+                        System.out.println("⚠️ Keine Aufgaben zum Löschen.");
+                    } else {
+                        System.out.print("Welche Aufgabe löschen? (Nummer): ");
+                        try {
+                            int index = Integer.parseInt(scanner.nextLine()) - 1;
+                            if (index >= 0 && index < tasks.size()) {
+                                String removed = tasks.remove(index);
+                                System.out.println("🗑️ Aufgabe gelöscht: " + removed);
+                            } else {
+                                System.out.println("❌ Ungültige Nummer.");
+                            }
+                        } catch (NumberFormatException e) {
+                            System.out.println("❌ Bitte eine Zahl eingeben.");
+                        }
+                    }
+                    break;
+
                 default:
                     System.out.println("❌ Ungültige Eingabe.");
             }
